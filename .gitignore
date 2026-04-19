@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging/build
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing/coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local env files
+.env
+.env.*
+
+# Project data artifacts
+/data/processed/
+/data/raw/*.data
+
+# Model and output artifacts
+/outputs/models/
+/outputs/figures/
+
+# Notebook training artifacts
+/notebooks/catboost_info/
+
+# Common ML binaries
+*.joblib
+*.pkl
+*.npy
+*.npz
