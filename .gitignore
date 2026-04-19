@@ -44,19 +44,5 @@ htmlcov/
 .env
 .env.*
 
-# Project data artifacts
-/data/processed/
-/data/raw/*.data
-
-# Model and output artifacts
-/outputs/models/
-/outputs/figures/
-
 # Notebook training artifacts
 /notebooks/catboost_info/
-
-# Common ML binaries
-*.joblib
-*.pkl
-*.npy
-*.npz

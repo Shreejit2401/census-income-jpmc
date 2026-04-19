@@ -12,11 +12,11 @@ This repository is structured so a first-time user can run it end-to-end with mi
 ### Main folders
 
 - `data`/`raw`: input files used by the pipelines
-- `data`/`processed`: generated datasets and intermediate artifacts
+- `data`/`processed`: generated datasets and intermediate artifacts (Empty by default. It is filled automatically when the src scripts are executed)
 - `src`: runnable Python scripts for preprocessing and model training
 - `notebooks`: exploratory and modeling notebooks
-- `outputs`/`models`: trained model files
-- `outputs`/`figures`: saved charts (if generated)
+- `outputs`/`models`: trained model files (Empty by default. It is filled automatically when the src scripts are executed)
+- `outputs`/`figures`: saved charts (Empty by default. It is filled automatically when the src scripts are executed)
 
 ### Current source scripts
 
@@ -67,13 +67,37 @@ In outputs/models, you will see models such as:
 
 ## Quick Start (Beginner Friendly)
 
-### 1. Open terminal in project root
+### Required Python Version
+
+Use **Python 3.13.13** for this project. The scripts, notebook environment, and dependency versions were validated against that version, so using a different Python release may cause package compatibility issues.
+
+### 1. Install Python
+
+Download and install **Python 3.13.13** from the official Python website:
+
+- [Python downloads](https://www.python.org/downloads/)
+
+During installation on Windows, make sure **Add Python to PATH** is selected.
+
+### 2. Install Git
+
+If Git is not already installed, download it here:
+
+- [Git downloads](https://git-scm.com/downloads)
+
+### 3. Install VS Code
+
+If you want to run the notebooks or edit the code comfortably, install Visual Studio Code:
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+
+### 4. Open terminal in project root
 
 Example root path:
 
-`D:/Projects/TakeHomeProject`
+`D:/Projects/census-income-jpmc`
 
-### 2. Create and activate virtual environment
+### 5. Create and activate virtual environment
 
 Windows PowerShell:
 
@@ -82,20 +106,26 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-### 3. Install dependencies
+If PowerShell blocks script execution, run this once in the same terminal before activation:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+```
+
+### 6. Install dependencies
 
 ```powershell
 pip install -r requirements.txt
 ```
 
-### 4. Run preprocessing scripts
+### 7. Run preprocessing scripts
 
 ```powershell
 python src/classify_preprocess.py
 python src/segment_preprocess.py
 ```
 
-### 5. Train models
+### 8. Train models
 
 ```powershell
 python src/train_classifier.py
@@ -113,7 +143,7 @@ If you are starting from raw data, run in this exact order:
 3. `src`/`train_classifier.py`
 4. `src`/`train_segmentation.py`
 
-Notebook-first workflow is also supported. If you want exploratory context and visual analysis, run:
+Notebook-first workflow is also supported. If you want exploratory context, **chain of thought** and visual analysis, run:
 
 1. `notebooks`/`01_eda.ipynb`
 2. `notebooks`/`02_classification.ipynb`
@@ -193,19 +223,18 @@ Use the script run order above for consistent reproducibility from raw data.
 
 If this is your first ML repository:
 
-1. Run only preprocessing first and inspect data/processed
-2. Run training scripts one by one
-3. Open notebooks afterward to understand exploratory reasoning
+1. Install Python 3.13.13 first, then create the virtual environment.
+2. Run only preprocessing first and inspect `data/processed`.
+3. Run the training scripts one by one.
+4. Open the notebooks afterward to understand the exploratory reasoning.
 
-## Is One README Enough?
+Helpful sources:
 
-For this project size, one README is enough and is the best default.
-
-Split into extra docs only if you want deeper material, for example:
-
-- docs/modeling.md for detailed algorithm/tuning rationale
-- docs/data_dictionary.md for full column-level definitions
-- docs/deployment.md for serving and monitoring guidance
+- [Python official documentation](https://docs.python.org/3/)
+- [Git official documentation](https://git-scm.com/doc)
+- [VS Code user guide](https://code.visualstudio.com/docs)
+- [pandas documentation](https://pandas.pydata.org/docs/)
+- [scikit-learn documentation](https://scikit-learn.org/stable/)
 
 ## Tech Stack
 
