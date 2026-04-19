@@ -24,6 +24,7 @@ This repository is structured so a first-time user can run it end-to-end with mi
 - src/segment_preprocess.py: builds segmentation-ready matrices and files
 - src/train_classifier.py: trains and evaluates multiple classification models
 - src/train_segmentation.py: trains PCA + KMeans segmentation and saves summaries
+- src/utils.py: helper functions for logging, path management, and utilities
 
 ## Current Data Files
 
@@ -149,6 +150,16 @@ Notebook-first workflow is also supported. If you want exploratory context, **ch
 2. `notebooks`/`02_classification.ipynb`
 3. `notebooks`/`03_segmentation.ipynb`
 
+## Analysis Reports
+
+**Resource.docx**: Comprehensive analysis report (80+ pages) with:
+- Full data exploration and feature analysis
+- Classification preprocessing decisions and model comparisons
+- Threshold selection with sensitivity analysis and proof
+- Segmentation analysis with PCA, elbow method, and silhouette scores
+- All notebook figures and visualizations extracted and compiled
+- Business insights and decision rationale for each step
+
 ## What Each Script Does
 
 ### classify_preprocess.py
@@ -238,13 +249,16 @@ Helpful sources:
 
 ## Tech Stack
 
-- Python
+- Python 3.13.13
 - pandas, numpy
 - scikit-learn
 - xgboost, lightgbm, catboost
 - imbalanced-learn
 - category-encoders
 - matplotlib, seaborn
+- python-docx (report generation)
+- joblib (model serialization)
+- Git LFS (large file tracking for data and models)
 
 ## License
 
