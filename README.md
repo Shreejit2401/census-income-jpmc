@@ -12,12 +12,11 @@ This repository is structured so a first-time user can run it end-to-end with mi
 ### Main folders
 
 - `data`/`raw`: input files used by the pipelines
-- `data`/`processed`: generated datasets and intermediate artifacts (Empty by default. It is filled automatically when the src scripts are executed)
+- `data`/`processed`: generated datasets and intermediate artifacts
 - `src`: runnable Python scripts for preprocessing and model training
 - `notebooks`: exploratory and modeling notebooks
-- `outputs`/`models`: trained model files (Empty by default. It is filled automatically when the src scripts are executed)
-- `outputs`/`figures`: saved charts (Empty by default. It is filled automatically when the src scripts are executed)
-
+- `outputs`/`models`: trained model files
+- `outputs`/`figures`: saved charts
 ### Current source scripts
 
 - src/classify_preprocess.py: builds classification-ready datasets and train/test artifacts
